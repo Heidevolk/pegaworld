@@ -1,0 +1,399 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.logo-header {
+    width: 250px; /* Ajusta este valor para hacer la imagen más grande */
+    height: auto; /* Mantiene la proporción de la imagen */
+    display: block; /* Para que se comporte como un bloque */
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+}
+
+
+header {
+    background-color: #001f3f;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    margin: auto;
+}
+/* Body */
+body {
+    background-color: #f5f5f5; /* Fondo claro para todo el sitio */
+    font-family: 'Arial', sans-serif; /* Fuente fácil de leer */
+    margin: 0;
+    padding: 0;
+    color: #333333; /* Color de texto principal */
+    line-height: 1.6; /* Espaciado entre líneas */
+}
+
+/* Sección principal (hero) */
+.hero {
+    background-image: url('path-to-your-image.jpg'); /* Puedes agregar una imagen de fondo aquí */
+    background-size: cover;
+    background-position: center;
+    color: black; /* Texto en blanco sobre imagen de fondo */
+    padding: 100px 20px; /* Espaciado generoso */
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 48px; /* Título grande */
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.hero button {
+    background-color: #ff9900; /* Color de botón */
+    color: #ffffff; /* Texto del botón */
+    border: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.hero button:hover {
+    background-color: #ff7700; /* Cambiar color al pasar el mouse */
+}
+
+/* Características */
+.carac {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px; /* Espacio entre las tarjetas */
+}
+
+.carac .carat {
+    background: #001f3f;
+    display: flex;
+    width: 46%;
+    height: 200px;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 5px;
+    box-shadow: 0 0 6px 0 hwb(64 4% 9%);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative; /* Para que la superposición se ajuste */
+}
+
+.carac .carat:hover {
+    transform: scale(1.05); /* Agrandar ligeramente la tarjeta */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra más grande y difuminada */
+}
+
+.carac .carat:hover::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.1); /* Superposición leve y difuminada */
+    border-radius: 5px; /* Mantener bordes redondeados */
+    z-index: 1; /* Para que esté por encima del contenido */
+}
+
+.carac .carat img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 3px solid hsl(90, 33%, 2%);
+    border-radius: 50%;
+    display: block;
+    z-index: 2; /* Mantener la imagen encima de la superposición */
+}
+
+.carac .carat > .contenido-texto-car {
+    width: 60%;
+    color: #f7f7f7;
+    z-index: 2; /* Mantener el texto encima de la superposición */
+}
+
+.carac .carat > .contenido-texto-car p {
+    font-weight: 300;
+    padding-top: 5px;
+}
+
+.contacto p {
+    font-size: 16px;
+    color: #666666;
+}
+
+/* Footer */
+footer {
+    background: hsla(234, 77%, 43%, 0.671);
+    padding: 20px 0 30px 0;
+    overflow: auto;
+}
+
+.contenedor-footer {
+    display: flex;
+    width: 90%;
+    justify-content: space-evenly;
+    margin: auto;
+    padding-bottom: 5%;
+    border-bottom: 1px solid #ccc;
+}
+
+.content-foot {
+    text-align: center;
+}
+
+.content-foot h4 {
+    color: #f2f2f2;
+    border-bottom: 3px solid #001f3f;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Animación de subrayado y elevación */
+.content-foot h4::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    margin-top: 5px;
+    background: #ff9900;
+    transition: width 0.3s ease;
+}
+
+.content-foot h4:hover {
+    color: #ff9900;
+    transform: translateY(-5px); /* Elevación al pasar el cursor */
+}
+
+.content-foot h4:hover::after {
+    width: 100%; /* Subrayado completo al pasar el cursor */
+}
+
+.content-foot p {
+    color: #f2f2f2;
+}
+
+.titulo-final {
+    text-align: center;
+    font-size: 24px;
+    margin: 20px 0 0 0;
+    color: hsla(239, 83%, 16%, 0.637);
+}
+
+/* Enlaces dentro del footer */
+footer a {
+    color: #f2f2f2;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+footer a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    margin-top: 5px;
+    background: #ff9900;
+    transition: width 0.3s ease;
+}
+
+footer a:hover {
+    color: #ff9900;
+    transform: translateY(-5px); /* Efecto de elevación */
+}
+
+footer a:hover::after {
+    width: 100%; /* Subrayado al pasar el cursor */
+}
+
+
+/* Navbar */
+nav {
+    background-color: #001f3f;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0 10px;
+    position: relative;
+    transition: color 0.3s ease; /* Transición del color */
+}
+
+
+nav {
+    background-color: #001f3f;
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center;
+    padding: 10px;
+}
+
+
+
+nav ul li {
+    list-style: none;
+    margin: 0 15px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s ease;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    color: #ff9900;
+    transform: translateY(-5px); /* Efecto de elevación */
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    margin-top: 5px;
+    background: #ff9900;
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%; /* Subrayado ocupa todo el ancho del enlace */
+}
+
+
+nav ul li a {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: transform 0.3s ease; /* Animación de escalado */
+}
+
+nav ul li a:hover {
+    transform: translateY(-5px); /* Efecto de elevar el enlace */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para mayor dinamismo */
+}
+
+/*navbar js*/
+/* Navbar */
+nav {
+    background-color: #001f3f;
+    display: flex;
+    justify-content: center; /* Centrar el navbar */
+    align-items: center;
+    padding: 10px;
+}
+
+/* Icono de hamburguesa */
+.menu-icon {
+    display: none; /* Ocultar en pantallas grandes */
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-icon div {
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
+/* Menú de navegación */
+ul {
+    display: flex; /* Mostrar los enlaces en fila */
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    justify-content: center; /* Centrar los elementos de la lista */
+}
+
+ul li {
+    margin: 0 20px; /* Espacio a los lados de cada enlace */
+}
+
+ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Animación cuando pasa el cursor */
+ul li a:hover {
+    color: #ff9900; /* Color al pasar el cursor */
+    transform: translateY(-5px); /* Efecto de elevación */
+}
+
+/* Responsive: ocultar el menú y mostrar el icono en pantallas pequeñas */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: flex; /* Mostrar el icono */
+    }
+
+    ul {
+        display: none; /* Ocultar el menú por defecto */
+        flex-direction: column; /* Colocar los enlaces en columna */
+        position: absolute; /* Posicionamiento absoluto */
+        top: 50px; /* Espaciado desde la parte superior */
+        left: 0; /* Alinear a la izquierda */
+        background-color: #001f3f; /* Fondo del menú desplegable */
+        width: 100%; /* Ancho completo */
+        text-align: center; /* Centrar el texto */
+    }
+
+    ul.show {
+        display: flex; /* Mostrar el menú cuando se pulse el icono */
+    }
+
+    ul li {
+        margin: 10px 0; /* Espacio entre enlaces */
+    }
+
+    ul li a {
+        font-size: 20px; /* Tamaño de fuente mayor en móviles */
+        padding: 10px; /* Espaciado interno */
+    }
+}
+
+
+
+
+/* titulo */
+.titulo-final{
+    text-align: center;
+    font-size: 24px;
+    margin: 20px 0 0 0;
+    color: hsla(210, 100%, 12%, 0.61);
+}
+.Titulo {
+    text-align: center; /* Centrar el texto horizontalmente */
+    font-size: 24px; /* Ajustar el tamaño de fuente si lo deseas */
+    color: #001f3f; /* Color del texto (puedes cambiarlo) */
+    margin-top: 20px; /* Margen superior para separarlo de otros elementos */
+    margin-bottom: 20px; /* Margen inferior */
+}
